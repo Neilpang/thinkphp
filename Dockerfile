@@ -10,3 +10,5 @@ RUN sed -i 's,https://tajs.qq.com,#,' /var/www/html/tp5/application/index/contro
   && sed -i 's,https://e.topthink.com,#,' /var/www/html/tp5/application/index/controller/Index.php \
   && cp -r /var/www/html/tp5/application /var/www/application
 VOLUME ["/var/www/html/tp5/application"]
+COPY entrypoint.sh /entrypoint.sh
+ENTRYPOINT /entrypoint.sh
