@@ -12,3 +12,5 @@ RUN sed -i 's,https://tajs.qq.com,#,' /var/www/html/tp5/application/index/contro
 VOLUME ["/var/www/html/tp5/application"]
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT /entrypoint.sh
+CMD /run.sh
+
