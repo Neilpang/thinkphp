@@ -15,4 +15,4 @@ COPY .htaccess /var/www/html/tp5/public/
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["/run.sh"]
-RUN sed 's,DocumentRoot /var/www/html,DocumentRoot /var/www/html/tp5/public,' /etc/apache2/sites-enabled/000-default.conf
+RUN sed -i 's,DocumentRoot /var/www/html,DocumentRoot /var/www/html/tp5/public,' /etc/apache2/sites-enabled/000-default.conf
