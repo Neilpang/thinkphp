@@ -11,7 +11,7 @@ RUN sed -i 's,https://tajs.qq.com,#,' /var/www/html/tp5/application/index/contro
   && cp -r /var/www/html/tp5 /var/www/tp5
 
 VOLUME ["/var/www/html/tp5/application"]
-COPY .htaccess /var/www/html/
+
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["/run.sh"]
